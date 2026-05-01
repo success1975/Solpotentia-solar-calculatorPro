@@ -1349,7 +1349,7 @@ function recalc() {
   // Battery Bank Size (Ah) — System Sizing!B3
   // = ROUNDUP( (Input!G12 * Parameters!B27) / (Parameters!B4 * (Parameters!B5/100) * Parameters!B29) ,0)
   // Parameters!B27 = autonomy days, B4=sysVolt, B5=DoD%, B29=combinedLoss (sysEff)
-  const bankAh = Math.ceil((dailyEnergy * autodaysV) / (sysVoltV * dodV * sysEffV));
+  const bankAh = Math.ceil((dailyEnergy * autodaysV) / (sysVoltV * dodV));
 
   // Batteries per series string — System Sizing!B5 = SysV ÷ BattV
   const seriesPerString = sysVoltV / battVoltV;

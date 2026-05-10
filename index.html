@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- PWA Support -->
+  <meta name="theme-color" content="#4CAF7D">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Solpotentia Calculator Pro">
+  <link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIlNvbHBvdGVudGlhIENhbGN1bGF0b3IgUHJvIiwKICAic2hvcnRfbmFtZSI6ICJDYWxjUHJvIiwKICAiZGVzY3JpcHRpb24iOiAiUHJvZmVzc2lvbmFsIHNvbGFyIGNhbGN1bGF0b3IgYW5kIHByb3Bvc2FsIGdlbmVyYXRvciBieSBTb2xwb3RlbnRpYSBFbmVyZ3kgTHRkIiwKICAic3RhcnRfdXJsIjogIi9Tb2xwb3RlbnRpYS1zb2xhci1jYWxjdWxhdG9yUHJvLyIsCiAgInNjb3BlIjogIi9Tb2xwb3RlbnRpYS1zb2xhci1jYWxjdWxhdG9yUHJvLyIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgIm9yaWVudGF0aW9uIjogInBvcnRyYWl0IiwKICAidGhlbWVfY29sb3IiOiAiIzRDQUY3RCIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiIzBBMEYwQyIsCiAgImljb25zIjogWwogICAgewogICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbCw8c3ZnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zycgdmlld0JveD0nMCAwIDE5MiAxOTInPjxyZWN0IHdpZHRoPScxOTInIGhlaWdodD0nMTkyJyByeD0nNDAnIGZpbGw9JyM0Q0FGN0QnLz48dGV4dCB5PScxMzAnIHg9JzMwJyBmb250LXNpemU9JzEzMCc+4pqhPC90ZXh0Pjwvc3ZnPiIsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsCiAgICAgICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSIKICAgIH0KICBdLAogICJjYXRlZ29yaWVzIjogWyJ1dGlsaXRpZXMiLCAiYnVzaW5lc3MiXQp9">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#0A0F0C">
+
 <title>Solpotentia Solar Calculator Pro</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -212,7 +219,7 @@ body{background:var(--dark);color:var(--white);font-family:'DM Sans',sans-serif;
   <div class="cta-banner">
     <div class="ct">🚀 Need a Professional Report?</div>
     <div class="cs">AI-powered full report with cost breakdown and wiring config</div>
-    <a href="https://t.me/SolpotentiaSolarBot?start=fullreport" class="cta-btn">📲 Get Full Report — ₦2,000</a>
+    <a href="https://t.me/SolpotentiaSolarBot?start=fullreport" class="cta-btn">📲 Get Full Report — ₦5,000</a>
   </div>
 </div>
 
@@ -368,7 +375,7 @@ body{background:var(--dark);color:var(--white);font-family:'DM Sans',sans-serif;
   <div class="cta-banner">
     <div class="ct">🚀 Want a Full AI Report?</div>
     <div class="cs">Solar sizing + cost + wiring + printable proposal</div>
-    <a href="https://t.me/SolpotentiaSolarBot?start=fullreport" class="cta-btn">Get Full Report — ₦2,000</a>
+    <a href="https://t.me/SolpotentiaSolarBot?start=fullreport" class="cta-btn">Get Full Report — ₦5,000</a>
   </div>
 </div>
 
@@ -524,6 +531,23 @@ body{background:var(--dark);color:var(--white);font-family:'DM Sans',sans-serif;
   </div>
 </div>
 
+
+<!-- PWA INSTALL BANNER -->
+<div id="pwa-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#4CAF7D;padding:14px 16px;box-shadow:0 -4px 20px rgba(0,0,0,0.5);">
+  <div style="max-width:600px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="font-size:28px;line-height:1;">⚡</div>
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-size:13px;font-weight:800;color:#fff;">Install Solpotentia App</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.85);">Calculator Pro · Works offline · No data used</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;flex-shrink:0;">
+      <button onclick="dismissInstall()" style="background:rgba(0,0,0,0.2);border:none;color:#fff;padding:8px 12px;border-radius:8px;font-size:12px;cursor:pointer;">Later</button>
+      <button onclick="installApp()" style="background:#fff;border:none;color:#4CAF7D;padding:8px 14px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Syne',sans-serif;">Install ↓</button>
+    </div>
+  </div>
+</div>
 <footer class="footer">
   <strong style="color:var(--orange)">Solpotentia Energy Ltd</strong><br>
   Alor, Anambra State · Nigeria 🇳🇬<br>
@@ -963,7 +987,85 @@ function printProposal(){
     Thank you for choosing Solpotentia Energy Ltd for your solar needs.
   </div>
   <script>window.onload=function(){window.print();}<\/script>
-  </body></html>`);
+  
+<script>
+// PWA Install Logic
+let deferredPrompt = null;
+const banner = document.getElementById('pwa-banner');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  // Show banner after 3 seconds
+  setTimeout(() => {
+    if (!localStorage.getItem('pwa-dismissed-CalcPro')) {
+      banner.style.display = 'block';
+    }
+  }, 3000);
+});
+
+function installApp() {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choice) => {
+      if (choice.outcome === 'accepted') {
+        banner.style.display = 'none';
+        localStorage.setItem('pwa-dismissed-CalcPro', '1');
+      }
+      deferredPrompt = null;
+    });
+  } else {
+    // Fallback for iOS
+    alert('To install: tap the Share button in your browser, then "Add to Home Screen"');
+  }
+}
+
+function dismissInstall() {
+  banner.style.display = 'none';
+  localStorage.setItem('pwa-dismissed-CalcPro', '1');
+}
+
+window.addEventListener('appinstalled', () => {
+  banner.style.display = 'none';
+  deferredPrompt = null;
+});
+
+// Register inline service worker for offline support
+if ('serviceWorker' in navigator) {
+  const swCode = `
+const CACHE = 'solpotentia-calcpro-v1';
+const ASSETS = [self.location.pathname];
+
+self.addEventListener('install', e => {
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', e => {
+  e.waitUntil(caches.keys().then(keys => Promise.all(
+    keys.filter(k => k !== CACHE).map(k => caches.delete(k))
+  )));
+  self.clients.claim();
+});
+
+self.addEventListener('fetch', e => {
+  e.respondWith(
+    caches.match(e.request).then(cached => cached || fetch(e.request).then(res => {
+      const clone = res.clone();
+      caches.open(CACHE).then(c => c.put(e.request, clone));
+      return res;
+    }))
+  );
+});
+  `;
+  const blob = new Blob([swCode], {type: 'application/javascript'});
+  const swUrl = URL.createObjectURL(blob);
+  navigator.serviceWorker.register(swUrl, {scope: '/Solpotentia-solar-calculatorPro/'})
+    .then(() => console.log('SW registered for Calculator Pro'))
+    .catch(e => console.log('SW registration failed:', e));
+}
+</script>
+</body></html>`);
   win.document.close();
 }
 </script>

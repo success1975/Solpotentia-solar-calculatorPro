@@ -565,6 +565,7 @@ body{background:var(--dark);color:var(--white);font-family:'DM Sans',sans-serif;
 
 
 <script>
+
 // ─── APPLIANCE DATABASE ───
 const APPLIANCE_DB=[{group:"Lighting",name:"LED Bulb (9W)",watts:9},{group:"Lighting",name:"LED Bulb (15W)",watts:15},{group:"Lighting",name:"LED Bulb (20W)",watts:20},{group:"Lighting",name:"Energy Saver Bulb",watts:20},{group:"Lighting",name:"Fluorescent Tube (36W)",watts:36},{group:"Lighting",name:"Outdoor Security Light",watts:50},{group:"Fans",name:"Standing Fan",watts:60,surge:2},{group:"Fans",name:"Ceiling Fan",watts:75,surge:2},{group:"Fans",name:"Industrial/Big Ceiling Fan",watts:120,surge:2.5},{group:"Fans",name:"Exhaust Fan",watts:40,surge:1.5},{group:"TV & Entertainment",name:'LED TV 32"',watts:60},{group:"TV & Entertainment",name:'LED TV 43"',watts:90},{group:"TV & Entertainment",name:'LED TV 55"',watts:130},{group:"TV & Entertainment",name:"DSTV Decoder",watts:30},{group:"TV & Entertainment",name:"Home Theatre",watts:150},{group:"TV & Entertainment",name:"Projector",watts:250},{group:"Computing",name:"Laptop",watts:65},{group:"Computing",name:"Desktop Computer",watts:200},{group:"Computing",name:"Phone Charger",watts:15},{group:"Computing",name:"WiFi Router",watts:15},{group:"Computing",name:"Network Switch",watts:25},{group:"Computing",name:"CCTV System (4 cameras)",watts:40},{group:"Computing",name:"CCTV System (8 cameras)",watts:70},{group:"Kitchen",name:"Refrigerator (200L)",watts:150,surge:2.5},{group:"Kitchen",name:"Refrigerator (350L)",watts:200,surge:2.5},{group:"Kitchen",name:"Deep Freezer (200L)",watts:150,surge:2.5},{group:"Kitchen",name:"Deep Freezer (350L)",watts:250,surge:2.5},{group:"Kitchen",name:"Electric Kettle",watts:1500},{group:"Kitchen",name:"Blender/Mixer",watts:400,surge:2},{group:"Kitchen",name:"Microwave Oven",watts:1000},{group:"Kitchen",name:"Electric Iron",watts:1000,surge:1.2},{group:"Air Conditioning",name:"AC 1HP (Split)",watts:746,surge:3},{group:"Air Conditioning",name:"AC 1.5HP (Split)",watts:1119,surge:3},{group:"Air Conditioning",name:"AC 2HP (Split)",watts:1492,surge:3},{group:"Air Conditioning",name:"AC 2.5HP (Split)",watts:1865,surge:3},{group:"Water & Pumping",name:"Water Pump (0.5HP)",watts:375,surge:3},{group:"Water & Pumping",name:"Water Pump (1HP)",watts:750,surge:3},{group:"Water & Pumping",name:"Borehole Pump (1HP)",watts:750,surge:3},{group:"Water & Pumping",name:"Borehole Pump (2HP)",watts:1500,surge:3},{group:"Business Equipment",name:"Photocopier/Printer",watts:300},{group:"Business Equipment",name:"Laser Printer",watts:500},{group:"Business Equipment",name:"POS Machine",watts:15},{group:"Business Equipment",name:"Industrial Sewing Machine",watts:400,surge:2},{group:"Business Equipment",name:"Hair Dryer/Salon Dryer",watts:1800,surge:1.2},{group:"Business Equipment",name:"Barbing Clipper",watts:15},{group:"Business Equipment",name:"Welding Machine",watts:3000,surge:2},{group:"Business Equipment",name:"Electric Grinder",watts:750,surge:2}];
 
@@ -990,11 +991,11 @@ function printProposal(){
   <table><tr><th>Est. Monthly Savings</th><td>₦${r.monthlySavings.toLocaleString()}</td><th>Payback Period</th><td>${r.paybackMonths} months (${Math.ceil(r.paybackMonths/12)} years)</td></tr>
   <tr><th>25-Year Net Savings</th><td colspan="3">₦${r.net25.toLocaleString()}</td></tr></table>
   <div class="disclaimer">⚠ This proposal is based on the appliance load information provided by the client. Actual system performance may vary with battery age, temperature, shading, and usage patterns. Prices are indicative and subject to current market rates. Solpotentia Energy Ltd recommends a professional site assessment before final purchase.</div>
-  <div class="footer">
-    <strong>Solpotentia Energy Ltd</strong> · Alor, Anambra State, Nigeria<br>
-    📞 08137627210 · ✉️ solpotentia@gmail.com<br>
-    Thank you for choosing Solpotentia Energy Ltd for your solar needs.
-  </div>
+  </body></html>`);
+  win.document.close();
+  setTimeout(function(){win.print();}, 500);
+}
+
 </script>
 <script>
 
